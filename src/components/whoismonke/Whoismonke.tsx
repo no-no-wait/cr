@@ -85,39 +85,6 @@ export const Whoismonke: FC = () => {
         scrub: false,
       }
     })
-
-    // mm.add("(min-width: 1238px)", () => {
-    //   gsap.fromTo(`.${s.fireMonkey}`, {
-    //     y: 400
-    //   }, {
-    //     y: 0,
-    //     duration: 1,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: `.${s.fireMonkey}`,
-    //         start: 'top 100%',
-    //         end: 'bottom 800px',
-    //         scrub: true,
-    //     }
-    // })
-    // })
-
-
-    // mm.add("(min-width: 1600px)", () => {
-    //   gsap.fromTo(`.${s.fireMonkey}`, {
-    //     y: 400
-    //   }, {
-    //     y: 0,
-    //     duration: 1,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: `.${s.fireMonkey}`,
-    //         start: 'top 100%',
-    //         end: 'bottom 800px',
-    //         scrub: true,
-    //     }
-    // })  
-    // })
 })
 
   return (
