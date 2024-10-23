@@ -1,0 +1,88 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    box-shadow: inset 0 70px 40px -40px rgba(36, 36, 36, 0.75);
+    z-index: 9998;
+}
+
+// .nav {
+//     display: none;
+// }
+
+// .navButton {
+//     color: white;
+//     text-decoration: none;
+// }
+
+// .navLink {
+//     margin: -10px;
+//     padding: 10px;
+//     text-decoration: none;
+//     transition: .35s;
+
+//     &:hover {
+//         transform: translateY(25%);
+//         transition: .35s;
+//     }
+// }
+
+.logoIndex {
+    width: 182px;
+    transition: .35s;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        transition: .35s;
+    }
+}
+
+.logoLink {
+    margin: 12px 0;
+}
+
+// .socials {
+//     display: flex;
+//     column-gap: 22px;
+// }
+
+// .socialIcon {
+//     width: 63px;
+//     height: 61px;
+// }
+
+// .socialLink {
+//     cursor: pointer;
+//     transition: .35s;
+
+//     &:hover {
+//         transform: scale(1.05);
+//         transition: .35s;
+//     }
+// }
+
+@include media(">tablet") {
+    .root {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+@include media(">SDesktop") {
+    .root {
+        padding-top: 12px;
+    }
+
+    .nav {
+        display: flex;
+        column-gap: 24px;
+        font-size: 18px;
+    }
+}

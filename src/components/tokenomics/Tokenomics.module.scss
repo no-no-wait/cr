@@ -1,0 +1,261 @@
+@import "../../styles/breakpoints";
+
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 850px;
+    min-height: 1100px;
+
+    & > :nth-child(2) {
+        margin-right: -68px;
+    }
+
+    & > :nth-child(3) {
+        margin-left: -68px;
+    }
+
+    & > :nth-child(4) {
+        margin-right: -68px;
+    }
+
+    & > :nth-child(6) {
+        margin-left: -68px;
+    }
+
+    & > :nth-child(7) {
+        margin-right: -68px;
+    }
+}
+
+.tokenomicsText {
+    color: white;
+    font-size: 40px;
+    line-height: 58px;
+    margin-bottom: 24px;
+}
+
+.mb {
+    margin-bottom: 28px;
+}
+
+.monketToken2 {
+    display: none;
+    height: 900px;
+    width: 420px;
+}
+
+.monkeToken {
+    width: 400px;
+    animation: spin 3s linear infinite;
+}
+
+@include media(">tablet") {
+    .root {
+        margin-bottom: 0;
+        & > :nth-child(2) {
+            margin-right: -10px;
+        }
+    
+        & > :nth-child(3) {
+            margin-left: -10px;
+        }
+    
+        & > :nth-child(4) {
+            margin-right: -10px;
+        }
+    
+        & > :nth-child(6) {
+            margin-left: -10px;
+        }
+    
+        & > :nth-child(7) {
+            margin-right: -10px;
+        }
+    }
+}
+
+@include media(">SDesktop") {
+    .root {
+        position: relative;
+        min-height: unset;
+        &::before {
+            content: url(../../images/monkes/monke-token.png);
+            position: absolute;
+            bottom: -47%;
+            z-index: 1;
+            animation: spin 3s linear infinite;
+        }
+    }
+
+    .tokenomicsText {
+        font-size: 65px;
+    }
+
+    .monkeToken {
+        width: 800px;
+    }
+
+    .firstDesktopMII {
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .monkeToken {
+        display: none;
+    }
+
+    .monketToken2 {
+        position: relative;
+        display: block;
+        margin-top: 150px;
+    }
+
+    .presaleDP {
+        position: absolute;
+        left: -70%;
+        top: -20%;
+    }
+
+    .marketingDP {
+        position: absolute;
+        top: -7%;
+        left: 90%;
+    }
+
+    .liquidityDP {
+        position: absolute;
+        top: 13%;
+        left: -95%;
+    }
+
+    .stakingDP {
+        position: absolute;
+        top: 32%;
+        left: 90%;
+
+        & > :nth-child(3) {
+            transform: translateY(-75%) scaleX(-1);
+            transform-origin: center;
+        }
+    }
+
+    .rewardsDP {
+        position: absolute;
+        top: 47%;
+        left: -70%;
+
+        & > :nth-child(3) {
+            transform: translateY(-65%) scaleY(-1);
+            transform-origin: center;
+        }
+    }
+}
+
+@include media(">LDesktop") {
+    .root {
+        position: relative;
+        height: 875px;
+
+        &::before {
+            content: url(../../images/monkes/monke-token.png);
+            position: absolute;
+            bottom: -47%;
+            z-index: 1;
+            animation: Lspin 3s linear infinite;
+        }
+    }
+
+    .tokenomicsText {
+        font-size: 80px;
+    }
+
+    .monkeToken {
+        width: 800px;
+    }
+
+    .firstDesktopMII {
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .monkeToken {
+        display: none;
+    }
+
+    .monketToken2 {
+        position: relative;
+        display: block;
+        margin-top: 150px;
+    }
+
+    .presaleDP {
+        position: absolute;
+        left: -80%;
+        top: -20%;
+    }
+
+    .marketingDP {
+        position: absolute;
+        top: -7%;
+        left: 100%;
+    }
+
+    .liquidityDP {
+        position: absolute;
+        top: 13%;
+        left: -105%;
+    }
+
+    .stakingDP {
+        position: absolute;
+        top: 40%;
+        left: 102%;
+
+        & > :nth-child(3) {
+            transform: translateY(-75%) scaleX(-1);
+            transform-origin: center;
+        }
+    }
+
+    .rewardsDP {
+        position: absolute;
+        top: 50%;
+        left: -90%;
+
+        & > :nth-child(3) {
+            transform: translateY(-65%) scaleY(-1);
+            transform-origin: center;
+        }
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: scale(.3) rotate(0deg);
+    }
+    100% {
+        transform: scale(.3) rotate(360deg);
+    }
+}
+
+@keyframes Lspin {
+    0% {
+        transform: scale(.37) rotate(0deg);
+    }
+    100% {
+        transform: scale(.37) rotate(360deg);
+    }
+}

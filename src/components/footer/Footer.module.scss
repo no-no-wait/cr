@@ -1,0 +1,137 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 800px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../images/backgrounds/footer-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.32;
+        z-index: -1;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monkeLight {
+    width: 500px;
+    animation: scaleUpMobile 1s infinite ease-in;
+
+}
+
+.headerText {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 24px;
+}
+
+.mainText {
+    color: white;
+    max-width: 360px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 18px;
+}
+
+.socialsDesktop {
+    display: none;
+}
+
+.socialsMobile {
+    margin-top: 24px;
+    column-gap: 12px;
+
+    & > :nth-child(even) {
+        margin-bottom: 12px;
+    }
+
+    & > :nth-child(odd) {
+        margin-top: 12px;
+    }
+}
+
+@include media('>SDesktop') {
+    .root {
+        flex-direction: row-reverse;
+        min-height: 600px;
+    }
+
+    .headerText {
+        font-size: 65px;
+        line-height: 101px;
+    }
+
+    .mainText {
+        font-size: 21px;
+        line-height: 33px;
+        max-width: 600px;
+    }
+
+    .main {
+        margin-right: 32px;
+        transform: translateX(-32px);
+    }
+
+    .monkeLight {
+        width: 600px;
+        animation: scaleUpDesktop 1s infinite ease-in;
+    }
+
+    .socialsDesktop {
+        display: flex;
+        margin-top: 32px;
+
+        & > :nth-child(even) {
+            margin-bottom: 24px;
+        }
+
+        & > :nth-child(odd) {
+            margin-top: 24px;
+        }
+    }
+
+    .socialsMobile {
+        display: none;
+    }
+}
+
+@keyframes scaleUpMobile {
+    0% {
+        transform: translateY(30px) scale(1);
+    }
+    50% {
+        transform: translateY(30px) scale(1.1);
+    }
+    100% {
+        transform: translateY(30px) scale(1);
+    }
+}
+
+@keyframes scaleUpDesktop {
+    0% {
+        transform: translateY(40px) translateX(32px) scale(1);
+    }
+    50% {
+        transform: translateY(40px) translateX(32px) scale(1.1);
+    }
+    100% {
+        transform: translateY(40px) translateX(32px) scale(1);
+    }
+}

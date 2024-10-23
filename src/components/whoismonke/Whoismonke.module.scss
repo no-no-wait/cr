@@ -1,0 +1,226 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    min-height: 1500px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../images/backgrounds/bg-dots.png);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}
+
+.whoismonkeTxt {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.violetTextBG {
+    width: 380px;
+    height: 500px;
+}
+
+.violetTextBGWrapper {
+    position: relative;
+}
+
+.whitePaperButton {
+    width: 260px;
+    height: 65px;
+    background-color: #ff2098;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        background-color: #c4016a;
+    }
+}
+
+.mainInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textWithButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.crazyMonkeyTextItem {
+    color: white;
+    font-size: 26px;
+}
+
+.cmMarque {
+    margin: 0 3px;
+}
+
+.marqueeLine {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.velvetLine {
+    width: 2100px;
+}
+
+.marque {
+    position: absolute;
+    top: 45%;
+}
+
+.violetTextBGWrapper::before {
+    content: "MONKE: From Launch to\A Legend captures MONKE's meteoric\A rise from digital launch to meme icon.\A Armed with secure tokens,\A a dedicated and growing community,\A and a well-crafted marketing\A strategy, MONKE is set on a course \Ato surpass Pepe and claim dominance\A in the meme universe.\A\A As MONKE's influence expands,\A it's only a matter of time before this\A legendary figure becomes\A a household name in the digital world.";
+    position: absolute;
+    width: 225px;
+    top: 15%;
+    left: 12.5%;
+    line-height: 22px;
+    color: white;
+    font-weight: 600;
+    white-space: pre;
+    opacity: var(--main-text, 0);
+}
+
+.fireMonkeyHOWrapper {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.fireMonkeyHO {
+    position: absolute;
+    width: 600px;
+}
+
+.fireMonkey {
+    position: absolute;
+    // transform: translateY(300px);
+}
+
+.wildHO {
+    position: absolute;
+    width: 400px;
+    right: -40%;
+    top: -30%;
+}
+
+.bonusHO {
+    position: absolute;
+    width: 600px;
+    right: -75%;
+    top: 10%;
+    z-index: -1;
+}
+
+@include media(">SDesktop") {
+    .root {
+        min-height: 965px;
+    }
+
+    .bonusHO {
+        position: absolute;
+        width: 600px;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    .wildHO {
+        position: absolute;
+        width: 400px;
+        right: 0;
+        top: -30%;
+    }
+
+    .whoismonkeTxt {
+        font-size: 65px;
+    }
+
+    .fireMonkeyHO {
+        top: -90px;
+        left: -75px;
+        width: 700px;
+    }
+
+    .fireMonkey {
+        // top: 500px;
+        left: -75px;
+        width: 700px;
+    }
+
+    .mainInfo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .violetTextBG {
+        width: 750px;
+        height: 475px;
+    }
+
+    .whitePaperButton {
+        font-size: 28px;
+    }
+
+    .violetTextBGWrapper::before {
+        content: "MONKE: From Launch to Legend captures MONKE's\A meteoric rise from digital launch to meme icon.\A Armed with secure tokens, a dedicated and growing\A community, and a well-crafted marketing strategy,\A MONKE is set on a course to surpass Pepe and claim\A dominance in the meme universe.\A\A As MONKE's influence expands, it's only a matter\A of time before this legendary figure becomes\A a household name in the digital world.";
+        position: absolute;
+        width: 225px;
+        top: 15%;
+        left: 12.5%;
+        line-height: 32px;
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        white-space: pre;
+        opacity: var(--main-text, 0);
+    }
+}
+
+@include media(">LDesktop") {
+    .violetTextBGWrapper::before {
+        content: "MONKE: From Launch to Legend captures\A MONKE's meteoric rise from digital launch\A to meme icon. Armed with secure tokens,\A a dedicated and growing community,\A and a well-crafted marketing strategy,\A MONKE is set on a course to surpass\A Pepe and claim dominance\A in the meme universe.\A\A As MONKE's influence expands,\A it's only a matter of time before this\A legendary figure becomes a household\A name in the digital world.";
+        position: absolute;
+        width: 225px;
+        top: 15%;
+        left: 12.5%;
+        line-height: 32px;
+        color: white;
+        font-weight: 600;
+        font-size: 28px;
+        white-space: pre;
+    }
+
+    .violetTextBG {
+        width: 750px;
+        height: 650px;
+    }
+}

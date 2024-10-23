@@ -1,0 +1,32 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    min-height: 322px;
+}
+
+.gameText {
+    font-size: 45px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.monkeyVideo {
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    max-width: 1300px;
+}
+
+@include media('>SDesktop') {
+    .gameText {
+        font-size: 60px;
+    }
+
+    .monkeyVideo {
+        max-width: 1000px;
+    }
+}

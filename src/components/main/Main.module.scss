@@ -1,0 +1,318 @@
+@import "../../styles/breakpoints";
+
+.root {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+    padding-top: 180px;
+    min-height: 1200px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../images/backgrounds/bg-main.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.32;
+        z-index: -1;
+    }
+}
+
+.objectCherry {
+    display: block;
+    position: absolute;
+    width: 200px;
+    bottom: 35%;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.glare {
+    position: absolute;
+    width: 800px;
+}
+
+.glarePink {
+    right: -25%;
+}
+
+.glarePink1 {
+    right: -25%;
+    top: -25%;
+}
+
+.glareBlue {
+    left: -25%;
+}
+
+.objectGrapesHO {
+    display: block;
+    position: absolute;
+    width: 110px;
+    top: 20%;
+    left: 10%;
+    opacity: 0;
+}
+
+.objectBanana {
+    display: block;
+    position: absolute;
+    width: 196px;
+    right: 10%;
+    top: 35%;
+    opacity: 0;
+    z-index: -1;
+}
+
+.bmt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+
+.bmtArrow {
+    width: 40px;
+    transform: rotate(1.25turn);
+}
+
+.bmtText {
+    font-size: 28px;
+    max-width: 220px;
+    text-align: center;
+    margin: 24px 0;
+}
+
+.monkeText, .btrText, .btlText {
+    text-align: end;
+}
+
+.monkeText {
+    color: #ff008a;
+    font-size: 70px;
+    // clip-path: polygon(-130px 0, 35% 2px, 35% 100%, -130px 100%);
+}
+
+.btrText, .btlText {
+    font-size: 45px;
+}
+
+.mainText {
+    text-align: center;
+    line-height: 1.2;
+    opacity: 0;
+}
+
+.crazyMonkeyFull {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 425px;
+    opacity: 0;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        background-image: url('../../images/main/c-m-background.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        animation: scaleUp .5s infinite ease-in;
+    }
+}
+
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crazyMonkey {
+    position: relative;
+    width: 375px;
+    opacity: 0;
+}
+
+.calculatorDesktop {
+    width: 537px;
+}
+
+.calculatorMobile {
+    margin-top: 32px;
+    width: 330px;
+}
+
+.calculatorDesktop {
+    display: none;
+}
+
+// @include media(">phone") {
+//     .crazyMonkey {
+//         width: 375px;
+//     }
+
+//     .crazyMonkeyFull {
+//         width: 460px;
+
+//         &::before {
+//             top: -55px;
+//             left: 0;
+//             right: 0;
+//             bottom: 55px;
+//         }
+//     }
+// }
+
+@include media(">tablet") {
+    .root {
+        padding-top: 105px;
+    }
+}
+
+// @include media(">SDesktop") {
+//     .crazyMonkey {
+//         width: 600px;
+//     }
+// }
+
+@include media(">SDesktop") {
+    .root {
+        min-height: 1072px;
+    }
+}
+
+@include media(">desktop") {
+    .objectCherry {
+        display: block;
+        position: absolute;
+        width: 400px;
+        bottom: 30%;
+        right: 0;
+        left: unset;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .objectGrapesHO {
+        display: block;
+        position: absolute;
+        width: 220px;
+        top: 5%;
+        left: 10%;
+        opacity: 0;
+    }
+
+    .objectBanana {
+        display: block;
+        position: absolute;
+        width: 392px;
+        left: -3%;
+        right: unset;
+        top: unset;
+        bottom: 35%;
+        opacity: 0;
+    }
+
+    .root {
+        padding-top: 120px;
+    }
+
+    .bmtText {
+        font-size: 40px;
+    }
+
+    .mainSection {
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .calculatorDesktop {
+        display: block;
+    }
+
+    .calculatorMobile {
+        display: none;
+    }
+
+    .mainText {
+        width: 600px;
+    }
+
+    .crazyMonkey {
+        width: 625px;
+    }
+
+    .crazyMonkeyFull {
+        width: 800px;
+    }
+
+    .bmtText {
+        max-width: none;
+    }
+
+    .bmtArrow {
+        width: 80px;
+        transform: rotate(0deg);
+    }
+
+    .bmt {
+        flex-direction: row;
+    }
+
+    .monkeText {
+        font-size: 80px;
+    }
+
+    .btrText, .btlText {
+        font-size: 60px;
+    }
+}
+
+@include media(">LDesktop") {
+    .crazyMonkey {
+        width: 720px;
+    }
+
+    .objectCherry {
+        bottom: 0;
+    }
+
+    .objectBanana  {
+        bottom: 5%;
+    }
+
+    .objectGrapesHO {
+        top: 25%
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

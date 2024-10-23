@@ -1,0 +1,149 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    position: relative;
+    min-height: 1100px;
+    margin-bottom: 80px;
+}
+
+.whereToBuyMonkeyText {
+    color: white;
+    margin-bottom: 24px;
+}
+
+.glare {
+    position: absolute;
+    width: 800px;
+}
+
+.glarePink {
+    top: -35%;
+    right: -15%;
+}
+
+.glarePink1 {
+    width: 1000px;
+    left: -25%;
+    bottom: -50%;
+}
+
+.sliderImg {
+    width: 300px;
+}
+
+.isMonkeySecureText {
+    color: #ff008a;
+    margin-bottom: 24px;
+}
+
+.whereToBuyMonkeyText, .isMonkeySecureText {
+    font-size: 38px;
+    max-width: 340px;
+}
+
+.slider {
+    width: 300px;
+    transform: rotate(358deg);
+}
+
+.bussinessMonkey {
+    position: relative;
+    width: 600px;
+    // animation: scaleUp 1s infinite ease-in;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+@include media(">Ltablet") {
+    .root {
+        flex-direction: row-reverse;
+    }
+
+    .bussinessMonkey {
+        transform: translateX(-50px);
+    }
+}
+
+@include media(">desktop") { 
+    .root {
+        display: flex;
+        flex-direction: row-reverse;
+        min-height: 800px;
+    }
+
+    .slider {
+        width: 400px;
+    }
+
+    .bussinessMonkey {
+        position: relative;
+        width: 700px;
+        // transform: translateX(0) rotate(356deg);
+    }
+
+    .whereToBuyMonkeyText, .isMonkeySecureText {
+        font-size: 65px;
+        width: 100%;
+        max-width: 100%;
+        // line-height: 75px;
+        font-weight: 600;
+    }
+
+    .info {
+        width: 900px;
+    }
+
+    .whereToBuyMonkeyText {
+        max-width: 595px;
+        margin-bottom: 0;
+    }
+
+    .sliderImg {
+        width: 400px;
+    }
+}
+
+
+// @keyframes scaleUp {
+//     0% {
+//         transform: rotate(-5deg) scale(1);
+//     }
+//     50% {
+//         transform: rotate(5deg) scale(1.11);
+//     }
+//     100% {
+//         transform: rotate(-5deg) scale(1);
+//     }
+// }
+
+@include media(">LDesktop") {
+    .whereToBuyMonkeyText, .isMonkeySecureText {
+        font-size: 65px;
+        width: 100%;
+        max-width: 100%;
+        line-height: 75px;
+        font-weight: 600;
+    }
+
+    .info {
+        width: 900px;
+    }
+
+    .whereToBuyMonkeyText {
+        max-width: 595px;
+        margin-bottom: 0;
+    }
+
+    .bussinessMonkey {
+        width: 800px;
+    }
+}

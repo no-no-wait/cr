@@ -1,0 +1,292 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    min-height: 1600px;
+}
+
+.rightTriangle {
+    position: absolute;
+    width: 600px;
+    right: -50%;
+    bottom: -5%;
+    transform: rotate(330deg);
+    z-index: -1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.miniSlot {
+    width: 350px;
+}
+
+.msWrapper1, .msWrapper2, .msWrapper3 {
+    position: relative;
+    color: white;
+    white-space: pre;
+}
+
+.msWrapper1::after {
+    content: '"MONKE\A Return"';
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    font-size: 32px;
+    opacity: var(--before-opacity-main-1, 0);
+}
+
+.msWrapper1::before {
+    content: '- Website Launch.\A - Token Contract Creation.\A - Social Media Establishment.';
+    position: absolute;
+    top: 55%;
+    left: 12%;
+    opacity: var(--before-opacity-1, 0);
+}
+
+.msWrapper2::after {
+    content: '"MONKE\A Power Play"';
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    font-size: 32px;
+    opacity: var(--before-opacity-main-2, 0);
+}
+
+.msWrapper2::before {
+    content: '- CEX Listing.\A - $FROP Farm Game Launch.\A - Popo Gaming Lounge.';
+    position: absolute;
+    top: 55%;
+    left: 12%;
+    opacity: var(--before-opacity-2, 0);
+}
+
+.msWrapper3::after {
+    content: '"MONKe\A Call to Arms"';
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    font-size: 32px;
+    opacity: var(--before-opacity-main-3, 0);
+}
+
+.msWrapper3::before {
+    content: '- Contract Audit.\A - Plan Disclosure.\A - Community Building.';
+    position: absolute;
+    top: 55%;
+    left: 12%;
+    opacity: var(--before-opacity-3, 0);
+}
+
+.slots {
+    display: flex;
+    flex-direction: column;
+}
+
+.roadmapText {
+    font-size: 55px;
+    // line-height: 50px;
+    font-weight: 500;
+    height: 55px;
+    color: white;
+    margin-bottom: 48px;
+}
+
+.monkeWithCoconut {
+    width: 600px;
+    margin: -120px 0 0 58px;
+    z-index: 1;
+}
+
+.bigSlot {
+    display: none;
+    width: 800px;
+}
+
+.fdc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glare {
+    position: absolute;
+    width: 1200px;
+}
+
+.glarePink {
+    top: -35%;
+    right: -10%;
+}
+
+.luckySeven, .luckySevenHO {
+    position: absolute;
+}
+
+.luckySeven {
+    width: 350px;
+    right: -40%;
+    bottom: 0;
+    z-index: 2;
+}
+
+.luckySevenHO {
+    width: 200px;
+    left: -10%;
+    top: 0;
+}
+
+@include media(">SDesktop") {
+    .root {
+        min-height: 900px;
+    }
+
+    .rightTriangle {
+        position: absolute;
+        width: 800px;
+        right: -30%;
+        bottom: -35%;
+        transform: rotate(340deg);
+        z-index: -1;
+    }
+
+    .luckySevenHO {
+        width: 200px;
+        left: 10%;
+        top: 0;
+    }
+
+    .luckySeven {
+        width: 350px;
+        right: 10%;
+        bottom: 0;
+        z-index: 2;
+    }
+
+    .main {
+        flex-direction: row;
+    }
+
+    .roadmapText {
+        font-size: 80px;
+    }
+
+    .monkeWithCoconut {
+        width: 550px;
+        margin: 0;
+        transform: translateX(-90px) scale(1.4);
+    }
+
+    .bigSlot {
+        display: block;
+        transform: translateX(150px) scale(1.2);
+    }
+
+    .miniSlot {
+        display: none;
+    }
+
+    .bigSlotWrapper {
+        position: relative;
+        color: white;
+        white-space: pre;
+    }
+
+    .bigSlotWrapper::after {
+        content: '"MONKE\A Return"';
+        position: absolute;
+        top: 33%;
+        left: 27%;
+        font-size: 26px;
+        line-height: 28px;
+        opacity: var(--before-opacity-main-1-D, 0);
+    }
+
+    .bigSlotWrapper::before {
+        content: '- Website Launch.\A - Token Contract\A  Creation.\A - Social Media\A  Establishment.';
+        position: absolute;
+        top: 42%;
+        left: 27%;
+        z-index: 4;
+        font-size: 16px;
+        line-height: 22px;
+        opacity: var(--before-opacity-1-D, 0);
+    }
+
+    .before2::after {
+        content: '"MONKe Call\A to Arms"';
+        position: absolute;
+        top: 43%;
+        left: 52%;
+        z-index: 5;
+        font-size: 26px;
+        line-height: 28px;
+        opacity: var(--before-opacity-main-2-D, 0);
+    }
+
+    .before2::before {
+        content: '- Contract Audit.\A - Plan Disclosure.\A - Community Building.';
+        position: absolute;
+        top: 52%;
+        left: 52%;
+        z-index: 6;
+        font-size: 16px;
+        line-height: 22px;
+        opacity: var(--before-opacity-2-D, 0);
+    }
+
+    .before3::after {
+        content: 'MONKE\A POWER PLAY';
+        position: absolute;
+        top: 52%;
+        left: 79%;
+        z-index: 5;
+        font-size: 26px;
+        line-height: 28px;
+        opacity: var(--before-opacity-main-3-D, 0);
+    }
+
+    .before3::before {
+        content: '- CEX Listing.\A - $FROP Farm\A Game Launch.\A - Popo Gaming\A Lounge.';
+        position: absolute;
+        top: 61%;
+        left: 82%;
+        z-index: 6;
+        font-size: 16px;
+        line-height: 22px;
+        opacity: var(--before-opacity-3-D, 0);
+    }
+
+    .msWrapper1::after {
+        content: '';
+    }
+    
+    .msWrapper1::before {
+        content: '';
+    }
+    
+    .msWrapper2::after {
+        content: '';
+    }
+    
+    .msWrapper2::before {
+        content: '';
+    }
+    
+    .msWrapper3::after {
+        content: '';
+    }
+    
+    .msWrapper3::before {
+        content: '';
+    }
+}

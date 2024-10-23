@@ -1,0 +1,67 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tokenomicsText {
+    font-size: 50px;
+    line-height: 58px;
+    color: white;
+}
+
+.tfhp {
+    width: 210px;
+    margin-bottom: 12px;
+}
+
+.presaleText {
+    color: #ff2098;
+    font-size: 29px;
+    line-height: 33px;
+}
+
+.infoText {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    color: white;
+    max-width: 300px;
+}
+
+.line {
+    width: 430px;
+}
+
+.ml {
+    margin-left: 36px;
+}
+
+.ml2 {
+    margin-left: 72px;
+}
+
+.mr {
+    margin-right: 36px;
+}
+
+.mt {
+    margin-top: -42px;
+}
+
+.mt2 {
+    margin-top: -72px;
+}
+
+.start {
+    align-self: flex-start;
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.lineLeft {
+    transform: rotate(180deg);
+}
+

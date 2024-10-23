@@ -1,0 +1,52 @@
+.root {
+    max-width: 780px;
+    background-color: #ff008a;
+    padding: 26px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-height: 0;
+    transition: 0.5s;
+    min-height: 70px;
+}
+
+.header {
+    color: white;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainText {
+    overflow: hidden;
+    color: white;
+}
+
+.crosshair {
+    transition: .3s;
+
+    // & g:hover {
+    //     stroke: red;
+    // }
+    
+
+    // &::before:hover {
+    //     position: absolute;
+    //     background-color: white;
+    //     border-radius: 50%;
+    // }
+}
+
+.open {
+    max-height: 200px;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.rotate {
+    transform: rotate(45deg);
+    transition: transform .3s ease;
+}

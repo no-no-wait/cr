@@ -1,0 +1,142 @@
+@import "../../styles/breakpoints";
+
+.root {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    min-height: 550px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../../images/backgrounds/bg-unde-main.png);
+        background-size: cover;
+        background-position: bottom bottom;
+        background-repeat: no-repeat;
+        opacity: 0.32;
+        z-index: -1;
+    }
+}
+
+.m {
+    margin: 0 10px;
+}
+
+.marque, .marque1 {
+    display: none;
+}
+
+// .firstMarque {
+//     transform: rotate(359deg);
+// }
+
+// .secondMarque {
+//     transform: rotate(1deg);
+// }
+
+.futureListingsSlider {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.poweredBySlider {
+    width: 340px;
+    margin: 0 auto;
+}
+
+.sliderItem1 {
+    width: 280px;
+}
+
+.sliderItem2 {
+    width: 340px;
+}
+
+.futureListings, .poweredBy {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    padding: 60px 0 24px;
+}
+
+.futureListings {
+    margin: 0 auto;
+    
+}
+
+@include media(">Ltablet") {
+    .futureListingsSlider {
+        width: 900px;
+    }
+
+    .poweredBySlider {
+        width: 1080px;
+    }
+}
+
+.customDots, .customDots2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
+  
+    li {
+      margin: 0 5px;
+      padding: 0;
+      list-style: none;
+  
+      button {
+        border: none;
+        background: none;
+        padding: 0;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        font-size: 0;
+  
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #ff2098;
+          transition: background-color 0.3s ease;
+        }
+      }
+
+    }
+  }
+
+@include media(">SDesktop") {
+    .root {
+        min-height: 600px;
+    }
+
+    .marque, .marque1 {
+        display: block;
+    }
+
+    .dn {
+        display: none;
+    }
+
+    .futureListings, .poweredBy {
+        font-size: 65px;
+    }
+
+    .futureListingsSlider, .poweredBySlider {
+        font-size: 65px;
+        width: 100%;
+    }
+}

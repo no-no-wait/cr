@@ -1,0 +1,24 @@
+.socials {
+    display: flex;
+    column-gap: 22px;
+}
+
+.socialIcon {
+    width: 63px;
+    height: 61px;
+}
+
+.bigSocialIcon {
+    width: 98px;
+    height: 94px;
+}
+
+.socialLink {
+    cursor: pointer;
+    transition: .35s;
+
+    &:hover {
+        transform: scale(1.05);
+        transition: .35s;
+    }
+}

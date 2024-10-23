@@ -1,0 +1,171 @@
+@import "../../styles/breakpoints";
+
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+    min-height: 600px;
+}
+
+.customDots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex !important;
+    justify-content: center;
+  
+    li {
+      margin: 0 5px;
+      padding: 0;
+      list-style: none;
+  
+      button {
+        border: none;
+        background: none;
+        padding: 0;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        font-size: 0;
+  
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #ff2098;
+          transition: background-color 0.3s ease;
+        }
+      }
+
+    }
+  }
+
+.teamItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.teamBlock2 {
+    margin-top: 24px;
+}
+
+.teamText {
+    font-size: 50px;
+}
+
+.name, .position {
+    color: white;
+}
+
+.name {
+    font-size: 40px;
+}
+
+.position {
+    font-size: 15px;
+}
+
+.photo {
+    width: 200px;
+}
+
+.teamText {
+    color: white;
+}
+
+.teamDesktop {
+    display: none;
+}
+
+.teamBlock {
+    display: flex;
+    width: 100%;
+}
+
+.sliderWrapper {
+    width: 200px;
+}
+
+.teamDesktop {
+    margin-bottom: 24px;
+}
+
+.glare {
+    position: absolute;
+    width: 1000px;
+}
+
+.glarePink {
+    top: -75%;
+    right: -20%;
+}
+
+.crown, .crownHO {
+    position: absolute;
+}
+
+.crown {
+    right: -40%;
+    bottom: 0;
+    width: 300px;
+    transform: rotate(45deg);
+}
+
+.crownHO {
+    left: -40%;
+    top: 0;
+    width: 250px;
+    transform: rotate(345deg);
+    opacity: .5;
+}
+
+@include media(">SDesktop") {
+    .teamText {
+        font-size: 80px;
+    }
+
+    .crown {
+        right: 3%;
+        bottom: 0;
+        width: 300px;
+        transform: rotate(45deg);
+    }
+    
+    .crownHO {
+        left: 5%;
+        top: 0;
+        width: 250px;
+        transform: rotate(345deg);
+        opacity: .5;
+    }
+
+    .team {
+        width: 1065px;
+    }
+
+    .slider {
+        display: none;
+    }
+
+    .teamDesktop {
+        display: flex;
+    }
+
+    .teamDesktop2, .teamBlock2 {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        min-width: 100%;
+    }
+
+    .teamBlock2 {
+        margin-top: 0;
+    }
+}
