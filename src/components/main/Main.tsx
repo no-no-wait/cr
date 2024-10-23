@@ -19,10 +19,6 @@ export const Main: FC = () => {
     const crazyMonkeyRef = useRef(null);
 
     useGSAP(() => {
-        // const monkeText = new SplitType('#monkeText');
-        // const btrText = new SplitType('#btrText');
-        // const btlText = new SplitType('#btlText');
-
         gsap.to(`.${s.mainText}`, {
             opacity: 1,
             duration: 2.5,
