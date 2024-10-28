@@ -81,7 +81,7 @@
         position: relative;
         min-height: unset;
         &::before {
-            content: url(../../images/monkes/monke-token.png);
+            content: url(../../images/monkes/monke-token.webp);
             position: absolute;
             bottom: -47%;
             z-index: 1;
@@ -164,7 +164,7 @@
         height: 875px;
 
         &::before {
-            content: url(../../images/monkes/monke-token.png);
+            content: url(../../images/monkes/monke-token.webp);
             position: absolute;
             bottom: -47%;
             z-index: 1;

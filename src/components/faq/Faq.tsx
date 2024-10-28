@@ -11,23 +11,23 @@ const node = <div>
     </div>
 
 export const Faq: FC = () => {
-  useGSAP(() => {
-    gsap.fromTo(`.${s.faqText}`, {
-        scale: 3,
-        opacity: 0,
-    }, {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-        trigger: `.${s.faqText}`,
-        start: "bottom 100%",
-        end: "bottom 100%",
-        scrub: false,
-        }
-    })
-  })
+  // useGSAP(() => {
+  //   gsap.fromTo(`.${s.faqText}`, {
+  //       scale: 3,
+  //       opacity: 0,
+  //   }, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //       trigger: `.${s.faqText}`,
+  //       start: "bottom 100%",
+  //       end: "bottom 100%",
+  //       scrub: false,
+  //       }
+  //   })
+  // })
 
   return (
     <div className={s.root}>

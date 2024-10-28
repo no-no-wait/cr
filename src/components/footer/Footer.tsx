@@ -8,23 +8,23 @@ import MonkeLight from '../../images/monkes/monke-light.png';
 import s from './Footer.module.scss';
 
 export const Footer: FC = () => {
-  useGSAP(() => {
-    gsap.fromTo(`.${s.headerText}`, {
-        scale: 3,
-        opacity: 0,
-    }, {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-        trigger: `.${s.headerText}`,
-        start: "top 75%",
-        end: "top 50%",
-        scrub: false,
-        }
-    })
-  })
+  // useGSAP(() => {
+  //   gsap.fromTo(`.${s.headerText}`, {
+  //       scale: 3,
+  //       opacity: 0,
+  //   }, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //       trigger: `.${s.headerText}`,
+  //       start: "top 75%",
+  //       end: "top 50%",
+  //       scrub: false,
+  //       }
+  //   })
+  // })
 
   return (
     <div className={s.root}>

@@ -16,7 +16,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url(../../images/backgrounds/footer-bg.png);
+        background-image: url(../../images/backgrounds/footer-bg.webp);
         background-size: cover;
         background-repeat: no-repeat;
         opacity: 0.32;
@@ -32,7 +32,7 @@
 
 .monkeLight {
     width: 500px;
-    animation: scaleUpMobile 1s infinite ease-in;
+    // animation: scaleUpMobile 1s infinite ease-in;
 
 }
 
@@ -91,7 +91,7 @@
 
     .monkeLight {
         width: 600px;
-        animation: scaleUpDesktop 1s infinite ease-in;
+        // animation: scaleUpDesktop 1s infinite ease-in;
     }
 
     .socialsDesktop {

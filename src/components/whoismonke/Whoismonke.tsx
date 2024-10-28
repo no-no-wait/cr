@@ -4,11 +4,11 @@ import { useGSAP } from '@gsap/react';
 import cx from 'classnames';
 import Marquee from "react-fast-marquee";
 
-import VioletTextBG from '../../images/backgrounds/violet-text-bg.png'
-import FireMonkey from '../../images/objects/fire-monkey.webp';
-import WildHO from '../../images/objects/wild-half-opacity.png';
-import BonusHO from '../../images/objects/bonus-half-opacity.png';
-import FireMonkeyHO from '../../images/backgrounds/fire-monke-ho.png';
+import VioletTextBG from '../../images/backgrounds/violet-text-bg.webp'
+import FireMonkey from '../../images/objects/fire-monkey.png';
+import WildHO from '../../images/objects/wild-half-opacity.webp';
+import BonusHO from '../../images/objects/bonus-half-opacity.webp';
+import FireMonkeyHO from '../../images/backgrounds/fire-monke-ho.webp';
 import SVGVelvetLine from '../../images/other/velvet-line.svg';
 
 import s from './Whoismonke.module.scss';
@@ -30,48 +30,37 @@ export const Whoismonke: FC = () => {
             scrub: true,
         }
     })
-  
-    gsap.fromTo(`.${s.wildHO}`, {
+
+    gsap.fromTo(`.${s.objects}`, {
       y: 0,
     }, {
       y: -800,
       duration: 3,
       ease: "none",
       scrollTrigger: {
-          trigger: `.${s.wildHO}`,
+          trigger: `.${s.objects}`,
           start: 'top 100%',
           end: 'top 0',
+          // markers: true,
           scrub: true,
       }
   })
   
-  gsap.to(`.${s.bonusHO}`, {
-      y: -800,
-      duration: 3,
-      ease: "none",
-      scrollTrigger: {
-          trigger: `.${s.bonusHO}`,
-          start: 'top 100%',
-          end: 'top 0',
-          scrub: true,
-      }
-    })
-  
-    gsap.fromTo(`.${s.whoismonkeTxt}`, {
-      scale: 3,
-      opacity: 0,
-    }, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: `.${s.whoismonkeTxt}`,
-        start: "bottom 100%",
-        end: "bottom 100%",
-        scrub: false,
-      }
-    })
+    // gsap.fromTo(`.${s.whoismonkeTxt}`, {
+    //   scale: 3,
+    //   opacity: 0,
+    // }, {
+    //   opacity: 1,
+    //   scale: 1,
+    //   duration: 1,
+    //   ease: "power4.inOut",
+    //   scrollTrigger: {
+    //     trigger: `.${s.whoismonkeTxt}`,
+    //     start: "bottom 100%",
+    //     end: "bottom 100%",
+    //     scrub: false,
+    //   }
+    // })
   
     gsap.to(`.${s.violetTextBGWrapper}`, {
       "--main-text": 1,
@@ -89,8 +78,10 @@ export const Whoismonke: FC = () => {
 
   return (
     <div className={s.root}>
-      <img src={WildHO} className={s.wildHO} alt="wild ho" />
-      <img src={BonusHO} className={s.bonusHO} alt="bonus ho" />
+      <div className={s.objects}>
+        <img src={WildHO} className={s.wildHO} alt="wild ho" />
+        <img src={BonusHO} className={s.bonusHO} alt="bonus ho" />
+      </div>
         <div className={s.whoismonkeTxt}>WHO IS MONKE?</div>
           <div className={s.mainInfo}>
             <div className={s.textWithButton}>

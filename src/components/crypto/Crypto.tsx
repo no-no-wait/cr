@@ -3,21 +3,21 @@ import cx from 'classnames';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import BYBIT from '../../images/crypto/BYBIT.png';
-import ARBITRUM from '../../images/crypto/ARBITRUM.png';
-import AVALANCHE from '../../images/crypto/AVALANCHE.png';
-import BASE from '../../images/crypto/BASE.png';
-import BNBCHAIN from '../../images/crypto/BNBCHAIN.png';
-import ETH from '../../images/crypto/ETH.png';
-import GATEIO from '../../images/crypto/GATEIO.png';
-import HTX from '../../images/crypto/HTX.png';
-import KUCOIN from '../../images/crypto/KUCOIN.png';
-import MEXC from '../../images/crypto/MEXC.png';
-import OKX from '../../images/crypto/OKX.png';
-import OPTIMISM from '../../images/crypto/OPTIMISM.png';
-import PINKSALE from '../../images/crypto/PINKSALE.png';
-import POLYGON from '../../images/crypto/POLYGON.png';
-import SOLANA from '../../images/crypto/SOLANA.png';
+import BYBIT from '../../images/crypto/BYBIT.webp';
+import ARBITRUM from '../../images/crypto/ARBITRUM.webp';
+import AVALANCHE from '../../images/crypto/AVALANCHE.webp';
+import BASE from '../../images/crypto/BASE.webp';
+import BNBCHAIN from '../../images/crypto/BNBCHAIN.webp';
+import ETH from '../../images/crypto/ETH.webp';
+import GATEIO from '../../images/crypto/GATEIO.webp';
+import HTX from '../../images/crypto/HTX.webp';
+import KUCOIN from '../../images/crypto/KUCOIN.webp';
+import MEXC from '../../images/crypto/MEXC.webp';
+import OKX from '../../images/crypto/OKX.webp';
+import OPTIMISM from '../../images/crypto/OPTIMISM.webp';
+import PINKSALE from '../../images/crypto/PINKSALE.webp';
+import POLYGON from '../../images/crypto/POLYGON.webp';
+import SOLANA from '../../images/crypto/SOLANA.webp';
 
 import s from './Crypto.module.scss';
 import Slider from 'react-slick';
@@ -103,39 +103,39 @@ export const Crypto: FC = () => {
     ]
   };
 
-  useGSAP(() => {
-    gsap.fromTo(`.${s.futureListings}`, {
-      scale: 3,
-      opacity: 0,
-    }, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: `.${s.futureListings}`,
-        start: "bottom 100%",
-        end: "bottom 100%",
-        scrub: false,
-      }
-    })
+  // useGSAP(() => {
+  //   gsap.fromTo(`.${s.futureListings}`, {
+  //     scale: 3,
+  //     opacity: 0,
+  //   }, {
+  //     opacity: 1,
+  //     scale: 1,
+  //     duration: 1,
+  //     ease: "power4.inOut",
+  //     scrollTrigger: {
+  //       trigger: `.${s.futureListings}`,
+  //       start: "bottom 100%",
+  //       end: "bottom 100%",
+  //       scrub: false,
+  //     }
+  //   })
 
-    gsap.fromTo(`.${s.poweredBy}`, {
-      scale: 3,
-      opacity: 0,
-    }, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: `.${s.poweredBy}`,
-        start: "bottom 100%",
-        end: "bottom 100%",
-        scrub: false,
-      }
-    })
-  })
+  //   gsap.fromTo(`.${s.poweredBy}`, {
+  //     scale: 3,
+  //     opacity: 0,
+  //   }, {
+  //     opacity: 1,
+  //     scale: 1,
+  //     duration: 1,
+  //     ease: "power4.inOut",
+  //     scrollTrigger: {
+  //       trigger: `.${s.poweredBy}`,
+  //       start: "bottom 100%",
+  //       end: "bottom 100%",
+  //       scrub: false,
+  //     }
+  //   })
+  // })
 
   return (
     <div className={s.root}>

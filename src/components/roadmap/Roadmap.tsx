@@ -3,211 +3,211 @@ import cx from 'classnames';
 import gsap from 'gsap';
 
 
-import MiniSlot from '../../images/objects/mini-slot.png'
+import MiniSlot from '../../images/objects/mini-slot.webp'
 import SVGBigSlot from '../../images/objects/big-slot.svg';
 import MonkeWithCoconut from '../../images/monkes/monke-with-coconut.png';
 import GlarePink from '../../images/glare/glare-pink.png';
-import LuckySeven from '../../images/objects/lucky-seven.png';
-import LuckySevenHO from '../../images/objects/lucky-seven-half-opacity.png';
+import LuckySeven from '../../images/objects/lucky-seven.webp';
+import LuckySevenHO from '../../images/objects/lucky-seven-half-opacity.webp';
 
 import s from './Roadmap.module.scss';
 import { useGSAP } from '@gsap/react';
 
 export const Roadmap: FC = () => {
-  useGSAP(() => {
-    gsap.fromTo(`.${s.roadmapText}`, {
-        scale: 3,
-        opacity: 0,
-      }, {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.roadmapText}`,
-          start: "top 100%",
-          end: "bottom 0",
-          scrub: false,
-        }
-      })
+  // useGSAP(() => {
+  //   gsap.fromTo(`.${s.roadmapText}`, {
+  //       scale: 3,
+  //       opacity: 0,
+  //     }, {
+  //       opacity: 1,
+  //       scale: 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.roadmapText}`,
+  //         start: "top 100%",
+  //         end: "bottom 0",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.luckySeven}`, {
-        y: -2000,
-        duration: 3,
-        ease: "none",
-        scrollTrigger: {
-            trigger: `.${s.luckySeven}`,
-            start: 'top 100%',
-            end: 'top 0',
-            scrub: true,
-        }
-    })
+  //     gsap.to(`.${s.luckySeven}`, {
+  //       y: -2000,
+  //       duration: 3,
+  //       ease: "none",
+  //       scrollTrigger: {
+  //           trigger: `.${s.luckySeven}`,
+  //           start: 'top 100%',
+  //           end: 'top 0',
+  //           scrub: true,
+  //       }
+  //   })
 
-    gsap.to(`.${s.luckySevenHO}`, {
-      y: -2000,
-      duration: 3,
-      ease: "none",
-      scrollTrigger: {
-          trigger: `.${s.luckySevenHO}`,
-          start: 'top 100%',
-          end: 'top 0',
-          scrub: true,
-      }
-    })
+  //   gsap.to(`.${s.luckySevenHO}`, {
+  //     y: -2000,
+  //     duration: 3,
+  //     ease: "none",
+  //     scrollTrigger: {
+  //         trigger: `.${s.luckySevenHO}`,
+  //         start: 'top 100%',
+  //         end: 'top 0',
+  //         scrub: true,
+  //     }
+  //   })
 
-    gsap.to(`.${s.msWrapper1}`, {
-        "--before-opacity-main-1": 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper1}`,
-          start: "top 100%",
-          end: "top 90%",
-          scrub: false,
-        }
-      })
+  //   gsap.to(`.${s.msWrapper1}`, {
+  //       "--before-opacity-main-1": 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper1}`,
+  //         start: "top 100%",
+  //         end: "top 90%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.msWrapper1}`, {
-        "--before-opacity-1": 1,
-        duration: 1,
-        delay: 0.2,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper1}`,
-          start: "top 100%",
-          end: "top 90%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.msWrapper1}`, {
+  //       "--before-opacity-1": 1,
+  //       duration: 1,
+  //       delay: 0.2,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper1}`,
+  //         start: "top 100%",
+  //         end: "top 90%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.msWrapper2}`, {
-        "--before-opacity-main-2": 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper2}`,
-          start: "top 100%",
-          end: "top 90%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.msWrapper2}`, {
+  //       "--before-opacity-main-2": 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper2}`,
+  //         start: "top 100%",
+  //         end: "top 90%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.msWrapper2}`, {
-        "--before-opacity-2": 1,
-        duration: 1,
-        delay: 0.2,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper2}`,
-          start: "top 25%",
-          end: "top 25%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.msWrapper2}`, {
+  //       "--before-opacity-2": 1,
+  //       duration: 1,
+  //       delay: 0.2,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper2}`,
+  //         start: "top 25%",
+  //         end: "top 25%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.msWrapper3}`, {
-        "--before-opacity-main-3": 1,
-        duration: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper3}`,
-          start: "top 100%",
-          end: "top 90%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.msWrapper3}`, {
+  //       "--before-opacity-main-3": 1,
+  //       duration: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper3}`,
+  //         start: "top 100%",
+  //         end: "top 90%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.msWrapper3}`, {
-        "--before-opacity-3": 1,
-        duration: 1,
-        delay: 0.2,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.msWrapper3}`,
-          start: "top 100%",
-          end: "top 90%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.msWrapper3}`, {
+  //       "--before-opacity-3": 1,
+  //       duration: 1,
+  //       delay: 0.2,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.msWrapper3}`,
+  //         start: "top 100%",
+  //         end: "top 90%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.bigSlotWrapper}`, {
-        "--before-opacity-main-1-D": 1,
-        duration: 1,
-        delay: 0.2,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.bigSlotWrapper}`,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.bigSlotWrapper}`, {
+  //       "--before-opacity-main-1-D": 1,
+  //       duration: 1,
+  //       delay: 0.2,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.bigSlotWrapper}`,
+  //         start: "top 80%",
+  //         end: "top 50%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.bigSlotWrapper}`, {
-        "--before-opacity-1-D": 1,
-        duration: 1,
-        delay: 0.4,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.bigSlotWrapper}`,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.bigSlotWrapper}`, {
+  //       "--before-opacity-1-D": 1,
+  //       duration: 1,
+  //       delay: 0.4,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.bigSlotWrapper}`,
+  //         start: "top 80%",
+  //         end: "top 50%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.before2}`, {
-        "--before-opacity-main-2-D": 1,
-        duration: 1,
-        delay: 0.6,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.before2}`,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.before2}`, {
+  //       "--before-opacity-main-2-D": 1,
+  //       duration: 1,
+  //       delay: 0.6,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.before2}`,
+  //         start: "top 80%",
+  //         end: "top 50%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.before2}`, {
-        "--before-opacity-2-D": 1,
-        duration: 1,
-        delay: 0.8,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.before2}`,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.before2}`, {
+  //       "--before-opacity-2-D": 1,
+  //       duration: 1,
+  //       delay: 0.8,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.before2}`,
+  //         start: "top 80%",
+  //         end: "top 50%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.before3}`, {
-        "--before-opacity-main-3-D": 1,
-        duration: 1,
-        delay: 1,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.before3}`,
-          start: "top 75%",
-          end: "top 30%",
-          scrub: false,
-        }
-      })
+  //     gsap.to(`.${s.before3}`, {
+  //       "--before-opacity-main-3-D": 1,
+  //       duration: 1,
+  //       delay: 1,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.before3}`,
+  //         start: "top 75%",
+  //         end: "top 30%",
+  //         scrub: false,
+  //       }
+  //     })
 
-      gsap.to(`.${s.before3}`, {
-        "--before-opacity-3-D": 1,
-        duration: 1,
-        delay: 1.2,
-        ease: "power4.inOut",
-        scrollTrigger: {
-          trigger: `.${s.before3}`,
-          start: "top 75%",
-          end: "top 30%",
-          scrub: false,
-        }
-      })
-  })
+  //     gsap.to(`.${s.before3}`, {
+  //       "--before-opacity-3-D": 1,
+  //       duration: 1,
+  //       delay: 1.2,
+  //       ease: "power4.inOut",
+  //       scrollTrigger: {
+  //         trigger: `.${s.before3}`,
+  //         start: "top 75%",
+  //         end: "top 30%",
+  //         scrub: false,
+  //       }
+  //     })
+  // })
 
   return (
     <div className={s.root}>

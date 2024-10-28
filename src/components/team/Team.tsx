@@ -3,9 +3,9 @@ import cx from 'classnames';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-import tPhoto from '../../images/monkes/monke-token.png';
+import tPhoto from '../../images/monkes/monke-token.webp';
 import GlarePink from '../../images/glare/glare-pink.png';
-import Crown from '../../images/objects/crown.png';
+import Crown from '../../images/objects/crown.webp';
 
 import s from './Team.module.scss';
 import Slider from 'react-slick';
@@ -20,46 +20,46 @@ const topTeamArray: Array<TeamInterface> = [{ name: 'JasonA', position: 'Crypto 
 const bottomTeamArray: Array<TeamInterface> = [{ name: 'JasonB', position: 'Crypto Marketing', photo: tPhoto }, { name: 'JasonD', position: 'Crypto Marketing', photo: tPhoto }, { name: 'JasonF', position: 'Crypto Marketing', photo: tPhoto }, { name: 'JasonH', position: 'Crypto Marketing', photo: tPhoto }, { name: 'JasonJ', position: 'Crypto MarketingL', photo: tPhoto }];
 
 export const Team: FC = () => {
-    useGSAP(() => {
-        gsap.fromTo(`.${s.teamText}`, {
-            scale: 3,
-            opacity: 0,
-        }, {
-            opacity: 1,
-            scale: 1,
-            duration: 1,
-            ease: "power4.inOut",
-            scrollTrigger: {
-            trigger: `.${s.teamText}`,
-            start: "bottom 80%",
-            end: "bottom 100%",
-            scrub: false,
-            }
-        })
-        gsap.to(`.${s.crown}`, {
-            y: -2000,
-            duration: 3,
-            ease: "none",
-            scrollTrigger: {
-                trigger: `.${s.crown}`,
-                start: 'top 100%',
-                end: 'top 0',
-                scrub: true,
-            }
-        })
+    // useGSAP(() => {
+    //     gsap.fromTo(`.${s.teamText}`, {
+    //         scale: 3,
+    //         opacity: 0,
+    //     }, {
+    //         opacity: 1,
+    //         scale: 1,
+    //         duration: 1,
+    //         ease: "power4.inOut",
+    //         scrollTrigger: {
+    //         trigger: `.${s.teamText}`,
+    //         start: "bottom 80%",
+    //         end: "bottom 100%",
+    //         scrub: false,
+    //         }
+    //     })
+    //     gsap.to(`.${s.crown}`, {
+    //         y: -2000,
+    //         duration: 3,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: `.${s.crown}`,
+    //             start: 'top 100%',
+    //             end: 'top 0',
+    //             scrub: true,
+    //         }
+    //     })
 
-        gsap.to(`.${s.crownHO}`, {
-            y: -2000,
-            duration: 3,
-            ease: "none",
-            scrollTrigger: {
-                trigger: `.${s.crownHO}`,
-                start: 'top 100%',
-                end: 'top 0',
-                scrub: true,
-            }
-        })
-    })
+    //     gsap.to(`.${s.crownHO}`, {
+    //         y: -2000,
+    //         duration: 3,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: `.${s.crownHO}`,
+    //             start: 'top 100%',
+    //             end: 'top 0',
+    //             scrub: true,
+    //         }
+    //     })
+    // })
     const settings = {
         dots: true,
         infinite: true,
