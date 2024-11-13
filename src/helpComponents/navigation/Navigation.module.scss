@@ -21,7 +21,7 @@
     }
 }
 
-@include media(">SDesktop") {
+@include media(">LDesktop") {
     .nav {
         display: flex;
         column-gap: 24px;

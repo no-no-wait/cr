@@ -14,6 +14,7 @@ import GrapesHO from '../../images/objects/grapes-half-opacity.webp';
 import { objectAppear, objectTransform } from '../../functions';
 
 import s from './Main.module.scss'
+import connectToContract from '../../blockchain/web3'; // remove
 
 export const Main: FC = () => {
     const crazyMonkeyRef = useRef<HTMLImageElement>(null);
@@ -25,6 +26,8 @@ export const Main: FC = () => {
     const monkeText = useRef<HTMLDivElement>(null);
     const btrText = useRef<HTMLDivElement>(null);
     const btlText = useRef<HTMLDivElement>(null);
+
+    connectToContract(); // remove
 
     useGSAP(() => {
         gsap.to(`.${s.objects}`, {

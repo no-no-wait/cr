@@ -6,6 +6,8 @@ import App from './App';
 
 import './styles/globals.scss';
 
+require('dotenv').config();
+
 const root = createRoot(
   document.getElementById('root') as HTMLElement
 );
